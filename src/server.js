@@ -1,7 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
-
+// import todoRoutes from '/routes/todo.routes';
 import db from './models';
 
 const app = express();
@@ -37,6 +37,10 @@ app.use('/api/test/', userRoutes);
 const authRoutes = require('./routes/auth.routes');
 
 app.use('/api/auth/', authRoutes);
+
+const todoRoutes = require('./routes/todo.routes');
+
+app.use('/api/todo/', todoRoutes);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
