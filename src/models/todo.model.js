@@ -11,7 +11,7 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.STRING,
       allowNull: true,
     },
-    isCompleted: {
+    completed: {
       type: Sequelize.BOOLEAN,
       defaultValue: false,
     },
@@ -20,7 +20,7 @@ module.exports = (sequelize, Sequelize) => {
       allowNull: true,
     },
     createdBy: {
-      type: Sequelize.INTEGER,
+      type: Sequelize.STRING,
       allowNUll: false,
     },
   });

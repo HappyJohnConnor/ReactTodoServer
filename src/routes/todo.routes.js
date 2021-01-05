@@ -15,7 +15,7 @@ router.use((req, res, next) => {
 router.get('/all', [ authJwt.verifyToken ], controller.getAllTodo);
 router.post('/create', [ authJwt.verifyToken ], controller.createTodo);
 router.get('/get', [ authJwt.verifyToken ], controller.getTodoById);
-router.get('/update', [ authJwt.verifyToken ], controller.updateTodoById);
+router.post('/update', [ authJwt.verifyToken ], controller.updateTodoById);
 router.delete('/delete', [ authJwt.verifyToken ], controller.deleteTodo);
 
 module.exports = router;
